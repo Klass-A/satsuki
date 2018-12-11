@@ -1,0 +1,402 @@
+body, html {
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  font-family: "osaka_unicode", "montserrat";
+}
+a {
+  text-decoration: none!important
+}
+p {
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
+
+
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+.satsuki-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.satsuki-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.satsuki-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  /*margin-top: -1px;*/
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/*
+ * Blog name and description
+ */
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* == Global == */
+#main-wrapper {
+  padding: 0
+}
+
+/* == Topbar-01 == */
+/* == Navbar-02 == */
+.navbar-outer {
+  background: #5c4a42;
+}
+.sa-navbar .nav a {
+  color: #fff;
+  font-size: 14px;
+}
+/* == Jumbotron-03 == */
+.jumbotron {
+  margin-top: 1.5rem;
+}
+.video-container {
+   background: url(http://www.satsuki-k.jp/jirei/img/Jirei2_photo3.jpg) no-repeat center center; 
+   background-size: cover;
+   /*height: 500px;*/
+}
+
+.video-container .video-div {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-overlay {
+  background: #c5c5c5a1;
+}
+.video-container .video-div:after {
+  content: "";
+  display: inline-block;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-left: 3em solid #ffffffb0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+/* == News & Blog-04 == */
+.blog-wrapper {
+  min-height: 200px;
+  background: #5c4a42;
+  background: #5c4a42 url('/src/img/noise.png');
+}
+.staff-news, .blog-news {
+  padding: 1.5em 0;
+  text-align: center;
+}
+.staff-news p, .blog-news p {
+  color: #f9f9f9;
+  margin-bottom: .3em;
+  font-size: 14px;
+}
+.blog-section-header h3 {
+  color: #FFF;
+}
+.blog-section-body .blog-news-single a,
+.blog-section-body .blog-news-single small {
+  color: #FFF;
+  text-align: left;
+  display: block;
+}
+
+/* == 8 Box Categories == */
+.box-categories .box {
+  height: 200px;
+  background: #ddd;
+  padding: 0;
+  -webkit-background-size: cover!important;
+       -o-background-size: cover!important;
+          background-size: cover!important;
+  background-position: center center!important;
+}
+.box-categories .box .box-footer {
+  width: 100%;
+  height: 40px;
+  background: #FFF;
+  color: #FFF;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+}
+
+.link-boxes .link {
+  height: 40px;
+  background: #dedede;
+  color: #fff;
+}
+
+/*Card Background Image*/
+.box-categories .camping-box {background: url('../img/camping.jpg')}
+.box-categories .fishing-box {background: url('../img/fishing.jpg')}
+.box-categories .biking-box {background: url('../img/biking.jpg')}
+.box-categories .skiing-box {background: url('../img/skiing.jpg')}
+.box-categories .cooking-box {background: url('../img/cooking.jpg')}
+.box-categories .reading-box {background: url('../img/reading.jpg')}
+.box-categories .barbecue-box {background: url('../img/barbecue.jpg')}
+.box-categories .fitness-box {background: url('../img/fitness.jpg')}
+
+
+/*Card Title Color*/
+.box-categories .camping-box .box-footer {background: #009641}
+.box-categories .fishing-box .box-footer {background: #764a12}
+.box-categories .biking-box .box-footer {background: #e51815}
+.box-categories .skiing-box .box-footer {background: #6db8ff}
+.box-categories .cooking-box .box-footer {background: #e5ce00}
+.box-categories .reading-box .box-footer {background: #141e53}
+.box-categories .barbecue-box .box-footer {background: #555555}
+.box-categories .fitness-box .box-footer {background: #ea34ba}
+
+.info-section p {
+  font-size: 15px;
+}
+
+
+
+/* Info Section */
+.info-section {
+  background: #f7f7f7;
+}
+
+/*Link Boxes*/
+.link-boxes .link {
+  height: 160px;
+  border: 2px solid #cfcfcf;
+  background: #ddd;
+  color: #000;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+/*All Staff Section*/
+.staff-img-section .staff-img {
+  height: 650px;
+  width: 100%;
+  background: url(../img/image_all_staff.jpg) no-repeat center -70px;
+}
+.staff-img-section .staff-img img {
+  width: 100%;
+}
+
+
+/*Footer*/
+.free-consultation {
+    font-size: 22px;
+    font-weight: bold;
+}
+.phone {font-size: 33px;}
+.contact {color: #5b4a43;}
+.brown-section {
+    background: #5b4a43;
+    color: #fff;
+    padding: 30px 10px;
+}
+.brown-section a:hover {color: #c5aba0;}
+.brown-section a {
+    color: #fff;
+    -webkit-transition: all .3s cubic-bezier(0, 0.67, 0.94, 0.97);
+    -moz-transition: all .3s cubic-bezier(0, 0.67, 0.94, 0.97);
+    -o-transition: all .3s cubic-bezier(0, 0.67, 0.94, 0.97);
+    font-size: 13px;
+}
+.construction-store {font-size: 28px;}
+.brown-section p {line-height: 24px;}
+#myBtn {
+    background: #5b4a43;
+    color: #fff;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 0;
+    border-radius: 35px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 992px){
+  #myBtn {margin: 30px auto 10px}
+}
+footer p {
+    font-size: 13px;
+    color: #5b4a43;
+}
+.fa-facebook {
+    color: #fff;
+    background: #3b5997;
+    padding: 12px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    position: relative;
+    left: 230px;
+    top: -50px;
+}
+i.fa.fa-instagram {
+    color: #fff;
+    background: #ef283b;
+    padding: 12px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    position: relative;
+    left: 230px;
+    top: -50px;
+}
