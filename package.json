@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage":"https://Klass-A.github.io/satsuki",
+  "homepage": "https://Klass-A.github.io/satsuki",
   "dependencies": {
     "gh-pages": "^2.0.1"
   }
