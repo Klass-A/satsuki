@@ -192,35 +192,53 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-size: 14px;
 }
+
+@media(max-width:768px){
+  .navbar-outer {
+    display: none;
+  }
+  .video-container .video-div {
+    height: 250px!important;
+  }
+}
+
 /* == Jumbotron-03 == */
 .jumbotron {
   margin-top: 1.5rem;
 }
 .video-container {
-   background: url(http://www.satsuki-k.jp/jirei/img/Jirei2_photo3.jpg) no-repeat center center; 
+   background: url('http://earnest-arch.jp/material/img/gallery_new/138/138_9.jpg') no-repeat center center; 
+   /*http://www.satsuki-k.jp/jirei/img/Jirei2_photo3.jpg*/
    background-size: cover;
    /*height: 500px;*/
 }
 
 .video-container .video-div {
-  min-height: 500px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .video-overlay {
-  background: #c5c5c5a1;
+  background: #0000004f;
 }
 .video-container .video-div:after {
   content: "";
   display: inline-block;
-  border-top: 2em solid transparent;
-  border-bottom: 2em solid transparent;
-  border-left: 3em solid #ffffffb0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1.5em solid #ffffffdb;
   border-radius: 3px;
   cursor: pointer;
 }
 
+@media(min-width: 768px){
+.video-container .video-div:after {
+      border-top: 2em solid transparent;
+      border-bottom: 2em solid transparent;
+      border-left: 3em solid #ffffffdb;
+  }
+}
 
 /* == News & Blog-04 == */
 .blog-wrapper {
@@ -304,6 +322,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
 }
 
+@media(max-width: 768px;){
+  .info-section.container {
+    padding: 10px!important;
+  }
+}
+
 
 
 /* Info Section */
@@ -325,14 +349,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*All Staff Section*/
-.staff-img-section .staff-img {
+/*.staff-img-section .staff-img {
   height: 650px;
   width: 100%;
   background: url(../img/image_all_staff.jpg) no-repeat center -70px;
+  -webkit-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
 }
 .staff-img-section .staff-img img {
   width: 100%;
-}
+}*/
 
 
 /*Footer*/
@@ -384,9 +411,9 @@ footer p {
     width: 40px;
     height: 40px;
     font-size: 19px;
-    position: relative;
+    /*position: relative;
     left: 230px;
-    top: -50px;
+    top: -50px;*/
 }
 i.fa.fa-instagram {
     color: #fff;
@@ -396,7 +423,7 @@ i.fa.fa-instagram {
     width: 40px;
     height: 40px;
     font-size: 19px;
-    position: relative;
+    /*position: relative;
     left: 230px;
-    top: -50px;
+    top: -50px;*/
 }
