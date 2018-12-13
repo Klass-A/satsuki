@@ -384,6 +384,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .construction-store {font-size: 28px;}
 .brown-section p {line-height: 24px;}
+
+@media(max-width: 768px){
+  .brown-section .brownLinkRow {
+    padding-left: 15px!important;
+  }
+}
+
 #myBtn {
     background: #5b4a43;
     color: #fff;
