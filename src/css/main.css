@@ -4,6 +4,7 @@ body, html {
 body {
   overflow: hidden;
   font-family: "osaka_unicode", "montserrat";
+  /*font-family: "メイリオ", Meiryo,"ヒラギノ角ゴ Pro W3","HIragino Kaku Gothic Pro W3","HIragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック", "MS P Gothic",sans-serif;*/
 }
 a {
   text-decoration: none!important
@@ -14,6 +15,9 @@ p {
   font-weight: normal;
 }
 
+a.telHref {
+  color: #5b4a43;
+}
 
 /* Preloader */
 #preloader {
@@ -51,7 +55,7 @@ p {
 
 .satsuki-header {
   line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
 }
 
 .satsuki-header-logo {
@@ -186,12 +190,58 @@ h1, h2, h3, h4, h5, h6 {
 /* == Topbar-01 == */
 /* == Navbar-02 == */
 .navbar-outer {
-  background: #5c4a42;
+  /*background: #5c4a42;*/
+  box-shadow: 2px 3px 5px #ddd;
 }
-.sa-navbar .nav a {
-  color: #fff;
-  font-size: 14px;
+.navbar-outer nav {
+  -webkit-justify-content: space-around!important;
+          justify-content: space-around!important;
 }
+
+.navbar-outer li {
+  display: flex;
+  flex-grow: 1;
+  -webkit-flex-basis: 80px; /*set the initial length*/
+          flex-basis: 80px; /*set the initial length*/
+  text-align: center;
+}
+
+.navbar-outer nav li a {
+  color: #000;
+  font: bold 12px/1 "montserrat";
+  text-align: center;
+  color: #333;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+  -webkit-transition: all .15s ease;
+     -moz-transition: all .15s ease;
+      -ms-transition: all .15s ease;
+       -o-transition: all .15s ease;
+          transition: all .15s ease;
+  border-left: 1px solid #ccc;
+}
+.navbar-outer nav li:first-child a {border: 0;}
+.navbar-outer nav li a:hover { color: #fff; }
+
+.navbar-outer nav li:first-child a { border-bottom: 7px solid #65b206; }
+.navbar-outer nav li:nth-child(2) a { border-bottom: 7px solid #03a7e2; }
+.navbar-outer nav li:nth-child(3) a { border-bottom: 7px solid #ffa200; }
+.navbar-outer nav li:nth-child(4) a { border-bottom: 7px solid #ff4800; }
+.navbar-outer nav li:nth-child(5) a { border-bottom: 7px solid #e100c3; }
+.navbar-outer nav li:nth-child(6) a { border-bottom: 7px solid #ff0000; }
+.navbar-outer nav li:nth-child(7) a { border-bottom: 7px solid #46b800; }
+.navbar-outer nav li:nth-child(8) a { border-bottom: 7px solid #404fbf; }
+
+
+.navbar-outer nav li:first-child a:hover { background: #65b206; }
+.navbar-outer nav li:nth-child(2) a:hover { background: #03a7e2; }
+.navbar-outer nav li:nth-child(3) a:hover { background: #ffa200; }
+.navbar-outer nav li:nth-child(4) a:hover { background: #ff4800; }
+.navbar-outer nav li:nth-child(5) a:hover { background: #e100c3; }
+.navbar-outer nav li:nth-child(6) a:hover { background: #ff0000; }
+.navbar-outer nav li:nth-child(7) a:hover { background: #46b800; }
+.navbar-outer nav li:nth-child(8) a:hover { background: #404fbf; }
+
 
 @media(max-width:768px){
   .navbar-outer {
@@ -244,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 .blog-wrapper {
   min-height: 200px;
   background: #5c4a42;
-  background: #5c4a42 url('/src/img/noise.png');
+  background: #5c4a42 url('/dist/src/img/noise.png');
 }
 .staff-news, .blog-news {
   padding: 1.5em 0;
@@ -290,6 +340,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 0;
 }
+.box-categories .box > a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 
 .link-boxes .link {
   height: 40px;
@@ -333,6 +388,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Info Section */
 .info-section {
   background: #f7f7f7;
+}
+
+.info-section img.logo-info {
+  width: 100%;
+  max-width: 400px;
 }
 
 /*Link Boxes*/
@@ -434,3 +494,34 @@ i.fa.fa-instagram {
     left: 230px;
     top: -50px;*/
 }
+
+/* Single pages */
+.singlepage-info > .jumbotron {
+  margin: 0;
+  background: #fff;
+  border-top:5px solid #999;
+}
+.singlepage-info {
+  padding: 0;
+}
+.singlepage-info .pageImg img {
+  max-width: 100%;
+}
+
+
+/*breadcrumb*/
+#breadcrumb {
+  height: 35px;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+}
+#breadcrumb a {
+  font: 200 12px/1 "montserrat";
+}
+#breadcrumb span.prev a {
+  color: #0099FF;
+  text-decoration: underline!important;
+}
+#breadcrumb span.curr a {color: #000;}
+
