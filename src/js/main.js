@@ -13,5 +13,5 @@ $('.fullYear').html(year)
 
 
 $('.categories-icons').on('click', function(){
-	$(this).addClass('active-cat');
+	$(this).parent().addClass('active-cat');
 })
