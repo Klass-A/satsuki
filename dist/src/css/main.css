@@ -523,8 +523,8 @@ i.fa.fa-instagram {
 #categories .inner-categories > .col {
   width: 200px;
 }
-#categories .inner-categories > .active-cat {
-  border-bottom: 2px solid #5b4a43; 
+.active-cat {
+  border-bottom: 2px solid #5b4a43!important; 
 }
 #categories .inner-categories > .col p {
   color: #5b4a43;
