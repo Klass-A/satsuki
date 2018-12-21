@@ -10,3 +10,8 @@ $(window).on('load', function() { // makes sure the whole site is loaded
 // Copyrights Get Current Year
 var year = new Date().getFullYear();
 $('.fullYear').html(year)
+
+
+$('.categories-icons').on('click', function(){
+	$(this).addClass('active-cat')
+})
